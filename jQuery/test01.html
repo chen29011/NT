@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    <style type="text/css">
+        * {
+            margin: auto;
+            padding: 0;
+        }
+
+        .body {
+            margin: 0 auto;
+            padding: 0;
+            text-align: center;
+            background-image: url("../image/div01.jpg");
+            background-size: 100%;
+            width: 100%;
+        }
+
+        .div01{
+            margin:0 auto;
+            width: 100%;
+            text-align: center;
+        }
+
+
+        .ul01 {
+            margin:0 auto;
+            list-style: none;
+            font-size: 40px;
+            color: #FFFFFF;
+        }
+
+        .ul02 {
+            margin-left: 40%;
+            overflow: hidden;
+            list-style-type: none;
+
+        }
+
+        .ul02 li {
+            float: left;
+            background-color: blue;
+            padding: 2px;
+        }
+
+        a:link, a:visited {
+            display: block;
+            width: 120px;
+            font-weight: bold;
+            color: #FFFFFF;
+            background-color: #bebebe;
+            text-align: center;
+            padding: 4px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        a:active {
+            background-color: #cc0000;
+        }
+
+        .div2 {
+            background-size: 80%;
+            background-repeat: no-repeat;
+            margin-top: 70px;
+            width: 80%;
+            height: 100%;
+
+        }
+    </style>
+</head>
+<body class="body">
+<div class="div01">
+    <ul class="ul02" id="ul02">
+        <li><a id="a1" href="#">我在山顶</a></li>
+        <li><a id="a2" href="#">我在山腰</a></li>
+        <li><a id="a3" href="#">我在山底</a></li>
+    </ul>
+</div>
+<div>
+    <ul class="ul01" id="ul01">
+        <li>冰寒千古，万物犹静。</li>
+        <li>心意气静，望我独神。</li>
+        <li>心意气静，望我独神。</li>
+        <li>心神合一，气宜相随。</li>
+        <li>相间若余，万变不惊。</li>
+        <li>无痴无嗔，无欲无求。</li>
+        <li>无舍无弃，无为无我。</li>
+    </ul>
+</div>
+
+<div id="div2" class="div2"></div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#a1").click(function () {
+            $("#div2").css({"background-image": "url('../image/mytop.jpg')"});
+        });
+
+        $("#a2").click(function () {
+            $("#div2").css({"background-image": "url('../image/my2.jpg')"});
+        });
+
+        $("#a3").click(function () {
+            $("#div2").css({"background-image": "url('../image/mydown.jpg')"});
+        });
+    });
+</script>
+</body>
+</html>

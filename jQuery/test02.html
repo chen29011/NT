@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery测试-test02</title>
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<button>发送一个 HTTP POST 请求道页面并获取返回内容</button>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("button").click(function () {
+            $.post("http://www.baidu.com",
+                    {
+                        name: "Donald Duck",
+                        city: "Duckburg"
+                    },
+                    function (data, status) {
+                        alert("Data: " + data + "\nStatus: " + status);
+                    });
+        });
+    });
+</script>
+</body>
+</html>
